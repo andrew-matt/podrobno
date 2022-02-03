@@ -1,0 +1,2 @@
+# podrobno
+ 
