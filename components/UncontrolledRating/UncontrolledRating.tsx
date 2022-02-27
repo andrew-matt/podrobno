@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 
-function Rating() {
+export function UncontrolledRating() {
 
-    const [value, setValue] = useState(0)
+    let [value, setValue] = useState(0)
 
     console.log("Rating rendering")
     return (
@@ -28,5 +28,3 @@ function Star(props: StarPropsType) {
         return <span>star </span>
     }
 }
-
-export default Rating;

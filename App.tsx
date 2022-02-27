@@ -4,8 +4,8 @@ import Accordion from "./components/Accordion/Accordion";
 import {OnOff} from './components/OnOff/OnOff';
 import {Rating} from "./components/Rating/Rating";
 import s from './components/OnOff/OnOff.module.css';
-import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
-import UncontrolledRating from "./components/UncontrolledRating/UncontrolledRating";
+import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
+import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
 
 function sum(a: number, b: number) {
     alert(a + b)
@@ -17,7 +17,7 @@ sum(100, 300);*/
 function App() {
     console.log("App rendering")
     return (
-        <div>
+        <div className={"App"}>
             {/*<OnOff/>*/}
             {/*  <img
                 src={"https://i.ytimg.com/vi/QIBNa-AIw8g/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAlxxFzxMagdsK2HGpW_HmTO71gCg"}/>
