@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
 import Accordion from "./components/Accordion/Accordion";
+import {OnOff} from './components/OnOff/OnOff';
 import {Rating} from "./components/Rating/Rating";
+import s from './components/OnOff/OnOff.module.css';
 
 function sum(a: number, b: number) {
     alert(a + b)
@@ -14,10 +16,13 @@ function App() {
     console.log("App rendering")
     return (
         <div>
-            <img
+            <OnOff/>
+            <OnOff/>
+            <OnOff/>
+            {/*  <img
                 src={"https://i.ytimg.com/vi/QIBNa-AIw8g/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAlxxFzxMagdsK2HGpW_HmTO71gCg"}/>
-            {/*<input/>
-            <input value={"yo"} type="password"/>*/}
+            <input/>
+            <input value={"yo"} type="password"/>
 
 
             <PageTitle title={"This is APP component"}/>
@@ -32,7 +37,7 @@ function App() {
             <Rating value={2}/>
             <Rating value={3}/>
             <Rating value={4}/>
-            <Rating value={5}/>
+            <Rating value={5}/>*/}
         </div>
     );
 }
