@@ -4,6 +4,8 @@ import Accordion from "./components/Accordion/Accordion";
 import {OnOff} from './components/OnOff/OnOff';
 import {Rating} from "./components/Rating/Rating";
 import s from './components/OnOff/OnOff.module.css';
+import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
+import UncontrolledRating from "./components/UncontrolledRating/UncontrolledRating";
 
 function sum(a: number, b: number) {
     alert(a + b)
@@ -16,9 +18,7 @@ function App() {
     console.log("App rendering")
     return (
         <div>
-            <OnOff/>
-            <OnOff/>
-            <OnOff/>
+            {/*<OnOff/>*/}
             {/*  <img
                 src={"https://i.ytimg.com/vi/QIBNa-AIw8g/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAlxxFzxMagdsK2HGpW_HmTO71gCg"}/>
             <input/>
@@ -30,14 +30,22 @@ function App() {
             Article 1
             <Rating value={3}/>
             <Accordion titleValue={"Menu"} collapsed={true}/>
-            <Accordion titleValue={"Users"} collapsed={false}/>
-            Article 2
+            <Accordion titleValue={"Users"} collapsed={false}/>*/}
+            <UncontrolledAccordion titleValue={"Menu"}/>
+            <UncontrolledAccordion titleValue={"Users"}/>
+            {/* Article 2
             <Rating value={0}/>
             <Rating value={1}/>
             <Rating value={2}/>
             <Rating value={3}/>
             <Rating value={4}/>
             <Rating value={5}/>*/}
+            <UncontrolledRating/>
+            <UncontrolledRating/>
+            <UncontrolledRating/>
+            <UncontrolledRating/>
+            <UncontrolledRating/>
+            <UncontrolledRating/>
         </div>
     );
 }
