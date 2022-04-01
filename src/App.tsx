@@ -18,13 +18,13 @@ function App() {
 
     let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
     let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
-    let [on, setOn] = useState<boolean>(false)
+    let [switchOn, setSwitchOn] = useState<boolean>(false)
 
     console.log("App rendering")
     return (
         <div className={"App"}>
-            <UncontrolledOnOff/>
-            <OnOff on={on} onClick={() => setOn(!on)}/>
+            <UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}
+{/*            <OnOff on={switchOn} onClick={() => setSwitchOn(!switchOn)}/>*/}
             {/*  <img
                 src={"https://i.ytimg.com/vi/QIBNa-AIw8g/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAlxxFzxMagdsK2HGpW_HmTO71gCg"}/>
             <input/>
