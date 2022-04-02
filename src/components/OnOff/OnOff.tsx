@@ -2,7 +2,7 @@ import React from 'react';
 
 type OnOffPropsType = {
     on: boolean
-    onClick: () => void
+    onChange: (on: boolean) => void
 }
 
 export const OnOff: React.FC<OnOffPropsType> = (props) => {
@@ -37,11 +37,19 @@ export const OnOff: React.FC<OnOffPropsType> = (props) => {
         backgroundColor: props.on ? "green" : "red"
     }
 
+    const onClicked = () => {
+        props.onChange(true)
+    }
+
+    const offClicked = () => {
+        props.onChange(false)
+    }
+
     return (
         <div>
-            <div style={OnStyle} onClick={props.onClick}>On</div>
-            <div style={OffStyle} onClick={props.onClick}>Off</div>
-            <div style={indicatorStyle}></div>
+            <div style={OnStyle} onClick={onClicked}>On</div>
+            <div style={OffStyle} onClick={offClicked}>Off</div>
+            <div style={indicatorStyle}/>
         </div>
     );
 };

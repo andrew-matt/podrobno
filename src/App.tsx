@@ -23,8 +23,8 @@ function App() {
     console.log("App rendering")
     return (
         <div className={"App"}>
-            <UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}
-{/*            <OnOff on={switchOn} onClick={() => setSwitchOn(!switchOn)}/>*/}
+            {/*<UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}*/}
+            <OnOff on={switchOn} onChange={setSwitchOn}/>
             {/*  <img
                 src={"https://i.ytimg.com/vi/QIBNa-AIw8g/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAlxxFzxMagdsK2HGpW_HmTO71gCg"}/>
             <input/>

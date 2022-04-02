@@ -52,7 +52,7 @@ export const UncontrolledOnOff: React.FC<UncontrolledOnOffPropsType> = (props) =
         <div>
             <div style={OnStyle} onClick={onClicked}>On</div>
             <div style={OffStyle} onClick={offClicked}>Off</div>
-            <div style={indicatorStyle}></div>
+            <div style={indicatorStyle}/>
         </div>
     );
 };
