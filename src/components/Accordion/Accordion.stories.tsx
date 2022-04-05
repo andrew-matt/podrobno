@@ -26,7 +26,10 @@ UsersUncollapsedMode.args = {
     onClick: callback
 }
 
-export const ModeChanging = () => {
+export const ModeChanging: Story<AccordionPropsType> = (args) => {
     const [value, setValue] = useState<boolean>(true);
-    return <Accordion titleValue={"Users"} collapsed={value} onClick={() => setValue(!value)}/>
+    return <Accordion {...args} collapsed={value} onClick={() => setValue(!value)}/>
 };
+ModeChanging.args = {
+    titleValue: "Users"
+}
