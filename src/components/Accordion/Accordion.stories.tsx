@@ -5,7 +5,15 @@ import {Story} from "@storybook/react";
 
 export default {
     title: 'Accordion',
-    component: Accordion
+    component: Accordion,
+    argTypes: {
+        color: {
+            control: 'color',
+            table: {
+                category: 'Colors'
+            }
+        }
+    }
 }
 
 const callback = action("accordion mode change event fired")
