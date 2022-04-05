@@ -4,7 +4,6 @@ import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
 import {Accordion} from "./components/Accordion/Accordion";
-import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
 import {OnOff} from "./components/OnOff/OnOff";
 
 function sum(a: number, b: number) {

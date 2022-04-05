@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import {UncontrolledOnOff} from "./UncontrolledOnOff";
+import {action} from "@storybook/addon-actions";
 
 export default {
     title: 'UncontrolledOnOff',
     component: UncontrolledOnOff
 }
 
-export const ModeChanging = () => {
-    const [value, setValue] = useState<boolean>(true);
-    return <UncontrolledOnOff onChange={setValue}/>
-};
+const callback = action("on or off clicked")
+
+export const OnMode = () => <UncontrolledOnOff defaultValue={true} onChange={callback}/>
+export const OffMode = () => <UncontrolledOnOff defaultValue={false} onChange={callback}/>
