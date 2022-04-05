@@ -44,7 +44,6 @@ function App() {
             <Rating value={ratingValue} onClick={setRatingValue}/>
             {/*<Rating value={4}/>
             <Rating value={5}/>*/}
-            <UncontrolledRating/>
         </div>
     );
 }
