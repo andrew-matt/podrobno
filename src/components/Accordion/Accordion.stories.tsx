@@ -24,14 +24,16 @@ export const MenuCollapsedMode = Template.bind({})
 MenuCollapsedMode.args = {
     titleValue: "Menu",
     collapsed: true,
-    onClick: callback
+    onClick: callback,
+    items: ["Bob", "John", "Ann"]
 }
 
 export const UsersUncollapsedMode = Template.bind({})
 UsersUncollapsedMode.args = {
     titleValue: "Users",
     collapsed: false,
-    onClick: callback
+    onClick: callback,
+    items: ["1", "2", "3"]
 }
 
 export const ModeChanging: Story<AccordionPropsType> = (args) => {
@@ -39,5 +41,6 @@ export const ModeChanging: Story<AccordionPropsType> = (args) => {
     return <Accordion {...args} collapsed={value} onClick={() => setValue(!value)}/>
 };
 ModeChanging.args = {
-    titleValue: "Users"
+    titleValue: "Users",
+    items: ["Bob", "John", "Ann"]
 }

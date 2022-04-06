@@ -34,7 +34,7 @@ function App() {
             <PageTitle title={"My friends"}/>
             Article 1
             <Rating value={3}/>*/}
-            <Accordion titleValue={"Menu"} collapsed={accordionCollapsed} onClick={() => setAccordionCollapsed(!accordionCollapsed)}/>
+            {/*<Accordion titleValue={"Menu"} collapsed={accordionCollapsed} onClick={() => setAccordionCollapsed(!accordionCollapsed)}/>*/}
              {/* <Accordion titleValue={"Users"} collapsed={false}/>*/}
             <UncontrolledAccordion titleValue={"Menu"}/>
             {/* Article 2
