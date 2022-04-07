@@ -1,54 +1,31 @@
 import React, {useState} from 'react';
 import './App.css';
-import {Rating, RatingValueType} from "./components/Rating/Rating";
-import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
-import {OnOff} from "./components/OnOff/OnOff";
 import {Select} from "./components/Select/Select";
 
 function App() {
 
-    let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
-    let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
-    let [switchOn, setSwitchOn] = useState<boolean>(false)
+    const [items, setItems] = useState([
+        {value: 1, title: "none"},
+        {value: 2, title: "Bob"},
+        {value: 3, title: "John"},
+        {value: 4, title: "Ann"}
+    ])
 
-    console.log("App rendering")
+    const [value, setValue] = useState(items[0].title)
+
+
+    const onItemClick = (value: any) => {
+        const item = items.find(i => i.value === value)
+        if (item) {
+            setValue(item.title)
+        }
+    }
+
     return (
         <div className={"App"}>
-            <Select value={1} onChange={() => {}} items={[{title: "none", value: 1}, {title: "Bob", value: 2}, {title: "John", value: 3}, {title: "Ann", value: 4}]}/>
-            {/*<UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}*/}
-            {/*<OnOff on={switchOn} onChange={setSwitchOn}/>*/}
-            {/*  <img
-                src={"https://i.ytimg.com/vi/QIBNa-AIw8g/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAlxxFzxMagdsK2HGpW_HmTO71gCg"}/>
-            <input/>
-            <input value={"yo"} type="password"/>
-
-
-            <PageTitle title={"This is APP component"}/>
-            <PageTitle title={"My friends"}/>
-            Article 1
-            <Rating value={3}/>*/}
-            {/*<Accordion titleValue={"Menu"} collapsed={accordionCollapsed} onClick={() => setAccordionCollapsed(!accordionCollapsed)}/>*/}
-             {/* <Accordion titleValue={"Users"} collapsed={false}/>*/}
-            {/*<UncontrolledAccordion titleValue={"Menu"}/>*/}
-            {/* Article 2
-            <Rating value={0}/>
-            <Rating value={1}/>
-            <Rating value={2}/>*/}
-            {/*<Rating value={ratingValue} onClick={setRatingValue}/>*/}
-            {/*<Rating value={4}/>
-            <Rating value={5}/>*/}
+            <Select value={value} onChange={onItemClick} items={items}/>
         </div>
     );
 }
-
-type PageTitlePropsType = {
-    title: string
-}
-
-function PageTitle(props: PageTitlePropsType) {
-    console.log("PageTitle rendering")
-    return <h1>{props.title}</h1>;
-}
-
 
 export default App;
