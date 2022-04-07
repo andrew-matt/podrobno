@@ -6,7 +6,7 @@ type ItemType = {
     title: string
 }
 
-type SelectPropsType = {
+export type SelectPropsType = {
     value: any
     onChange: (value: any) => void
     items: ItemType[]
