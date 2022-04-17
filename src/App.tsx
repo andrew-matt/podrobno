@@ -5,25 +5,17 @@ import {Select} from "./components/Select/Select";
 function App() {
 
     const [items, setItems] = useState([
-        {value: 1, title: "none"},
-        {value: 2, title: "Bob"},
-        {value: 3, title: "John"},
-        {value: 4, title: "Ann"}
+        {value: "1", title: "none"},
+        {value: "2", title: "Bob"},
+        {value: "3", title: "John"},
+        {value: "4", title: "Ann"}
     ])
 
-    const [value, setValue] = useState(items[0].title)
-
-
-    const onItemClick = (value: any) => {
-        const item = items.find(i => i.value === value)
-        if (item) {
-            setValue(item.title)
-        }
-    }
+    const [value, setValue] = useState("1")
 
     return (
         <div className={"App"}>
-            <Select value={value} onChange={onItemClick} items={items}/>
+            <Select value={value} items={items} onChange={setValue}/>
         </div>
     );
 }
