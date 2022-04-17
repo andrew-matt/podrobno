@@ -45,6 +45,9 @@ export function Select(props: SelectedPropsType) {
                     }
                 }
             }
+            if (!selectedItem) {
+                props.onChange(props.items[0].value)
+            }
         }
         if (e.key === 'Enter' || e.key === 'Escape') {
             setActive(false)
