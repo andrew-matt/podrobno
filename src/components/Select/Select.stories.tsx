@@ -1,15 +1,15 @@
 import React, {useState} from "react";
-import {Select, SelectedPropsType} from "./Select";
+import {SelectMemo, SelectedPropsType} from "./Select";
 import {Story} from "@storybook/react";
 
 export default {
     title: 'Select',
-    component: Select
+    component: SelectMemo
 }
 
 export const SelectWithValue: Story<SelectedPropsType> = (args) => {
     const [value, setValue] = useState("1")
-    return <Select {...args} value={value} onChange={setValue}/>
+    return <SelectMemo {...args} value={value} onChange={setValue}/>
 
 }
 SelectWithValue.args = {
@@ -23,7 +23,7 @@ SelectWithValue.args = {
 
 export const SelectWithoutValue: Story<SelectedPropsType> = (args) => {
     const [value, setValue] = useState(null)
-    return <Select {...args} value={value} onChange={setValue}/>
+    return <SelectMemo {...args} value={value} onChange={setValue}/>
 }
 SelectWithoutValue.args = {
     items: [
