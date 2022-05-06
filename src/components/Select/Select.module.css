@@ -1,3 +1,9 @@
+.cities {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .main{
     border: 1px solid black;
     display: inline-block;

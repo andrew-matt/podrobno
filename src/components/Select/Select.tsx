@@ -4,15 +4,17 @@ import s from './Select.module.css'
 export type ItemType = {
     title: string
     value: any
+    country?: string
+    population?: number
 }
 
-export type SelectedPropsType = {
+export type SelectPropsType = {
     value: any
     onChange: (value: any) => void
     items: ItemType[]
 }
 
-export function Select(props: SelectedPropsType) {
+export function Select(props: SelectPropsType) {
 
     const [active, setActive] = useState(false)
     const [hoveredElementValue, setHoveredElementValue] = useState(props.value)
@@ -75,5 +77,3 @@ export function Select(props: SelectedPropsType) {
         </div>
     )
 }
-
-export const SelectMemo = React.memo(Select)
