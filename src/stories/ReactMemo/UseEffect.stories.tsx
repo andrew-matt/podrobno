@@ -24,18 +24,24 @@ export const SimpleExample = () => {
         document.title = counter.toString();
     }, [counter])*/
 
-    useEffect(() => {
+    /*useEffect(() => {
         setTimeout(() => {
             console.log("setTimeout")
             document.title = counter.toString();
         }, 1000)
-    }, [counter])
+    }, [counter])*/
+
+    useEffect(() => {
+        setInterval(() => {
+            setCounter(state => state + 1);
+        }, 1000);
+    }, [])
 
     return (
         <>
-            Hello, {counter} {fake}
-            <button onClick={() => setFake(fake + 1)}>+</button>
-            <button onClick={() => setCounter(counter + 1)}>+</button>
+            Hello, counter: {counter} fake: {fake}
+            {/*<button onClick={() => setFake(fake + 1)}>+</button>*/}
+            {/*<button onClick={() => setCounter(counter + 1)}>+</button>*/}
         </>
     )
 }
