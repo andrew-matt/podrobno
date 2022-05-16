@@ -9,7 +9,7 @@ export const SimpleExample = () => {
     const [counter, setCounter] = useState(1);
     console.log("SimpleExample");
 
-    useEffect(() => {
+   /* useEffect(() => {
         console.log("useEffect every render");
         document.title = counter.toString();
     })
@@ -22,6 +22,13 @@ export const SimpleExample = () => {
     useEffect(() => {
         console.log("useEffect first render and every counter change");
         document.title = counter.toString();
+    }, [counter])*/
+
+    useEffect(() => {
+        setTimeout(() => {
+            console.log("setTimeout")
+            document.title = counter.toString();
+        }, 1000)
     }, [counter])
 
     return (
