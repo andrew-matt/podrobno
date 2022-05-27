@@ -31,30 +31,17 @@ export const SimpleExample = () => {
         }, 1000)
     }, [counter])*/
 
-    // useEffect(() => {
-    //     setInterval(() => {
-    //         setCounter(state => state + 1);
-    //     }, 1000);
-    // }, [])
-
-    const [date, setDate] = useState(new Date);
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
-    const seconds = date.getSeconds();
-    const time = `${hours < 10 ? "0" + hours : hours}:${minutes < 10 ? "0" + minutes : minutes}:${seconds < 10 ? "0" + seconds : seconds}`;
-
     useEffect(() => {
         setInterval(() => {
-            setDate(new Date);
-        }, 1000)
+            setCounter(state => state + 1);
+        }, 1000);
     }, [])
 
     return (
         <>
-            {time}
-            {/*Hello, counter: {counter} fake: {fake}*/}
-            {/*<button onClick={() => setFake(fake + 1)}>+</button>*/}
-            {/*<button onClick={() => setCounter(counter + 1)}>+</button>*/}
+            Hello, counter: {counter} fake: {fake}
+            <button onClick={() => setFake(fake + 1)}>+</button>
+            <button onClick={() => setCounter(counter + 1)}>+</button>
         </>
     )
 }
