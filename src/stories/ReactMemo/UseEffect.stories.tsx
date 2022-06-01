@@ -9,20 +9,20 @@ export const SimpleExample = () => {
     const [counter, setCounter] = useState(1);
     console.log("SimpleExample");
 
-   /* useEffect(() => {
-        console.log("useEffect every render");
-        document.title = counter.toString();
-    })
+    /* useEffect(() => {
+         console.log("useEffect every render");
+         document.title = counter.toString();
+     })
 
-    useEffect(() => {
-        console.log("useEffect first render");
-        document.title = counter.toString();
-    }, [])
+     useEffect(() => {
+         console.log("useEffect first render");
+         document.title = counter.toString();
+     }, [])
 
-    useEffect(() => {
-        console.log("useEffect first render and every counter change");
-        document.title = counter.toString();
-    }, [counter])*/
+     useEffect(() => {
+         console.log("useEffect first render and every counter change");
+         document.title = counter.toString();
+     }, [counter])*/
 
     /*useEffect(() => {
         setTimeout(() => {
@@ -42,6 +42,26 @@ export const SimpleExample = () => {
             Hello, counter: {counter} fake: {fake}
             <button onClick={() => setFake(fake + 1)}>+</button>
             <button onClick={() => setCounter(counter + 1)}>+</button>
+        </>
+    )
+}
+
+export const ResetEffectExample = () => {
+    const [counter, setCounter] = useState(1)
+
+    console.log("Component rendered")
+
+    useEffect(() => {
+        console.log("Effect occured")
+    }, [])
+
+    const increase = () => {
+        setCounter(counter + 1)
+    }
+
+    return (
+        <>
+            Hello, counter: {counter} <button onClick={increase}>+</button>
         </>
     )
 }
